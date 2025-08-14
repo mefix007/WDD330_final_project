@@ -1,7 +1,7 @@
 import ExternalServices from "./ExternalServices.mjs";
 import { getLocalStorage } from "./utils.mjs";
-import { loadHeaderFooter }  from "./utils.mjs";
-import {addProductToCart} from "./utils.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
+import { addProductToCart } from "./utils.mjs";
 
 loadHeaderFooter();
 function renderCartContents() {
@@ -12,7 +12,7 @@ function renderCartContents() {
   if (cartItems.length > 0) {
     const totalAmount = cartItems.reduce(
       (total, item) => total + item.FinalPrice * item.quantity,
-      0
+      0,
     );
     cartTotalContainer.innerHTML = `
       <div class="cart-total__summary">
@@ -27,11 +27,9 @@ function renderCartContents() {
     cartTotalContainer.style.display = "none"; // Hide if no items
   }
   addCartButtonListener();
-
 }
 
 function cartItemTemplate(item) {
-
   const newItem = `<li class="cart-card divider">
   <a href="#" class="cart-card__image">
     <img
@@ -62,11 +60,11 @@ function addCartButtonListener() {
       event.preventDefault();
       const productId = button.getAttribute("data-product-id");
       const cartItems = getLocalStorage("so-cart") || [];
-      const product = cartItems.find(item => item.Id === productId);
+      const product = cartItems.find((item) => item.Id === productId);
       if (product) {
         product.quantity += 1; // Increment quantity if product already in cart
       }
-      localStorage.setItem("so-cart", JSON.stringify(cartItems));  
+      localStorage.setItem("so-cart", JSON.stringify(cartItems));
       renderCartContents(); // Re-render the cart contents
     });
   });
@@ -75,8 +73,8 @@ function addCartButtonListener() {
       event.preventDefault();
       const productId = button.getAttribute("data-product-id");
       let cartItems = getLocalStorage("so-cart") || [];
-      let current_storage = cartItems.filter(item => item.Id != productId);
-      const product = cartItems.find(item => item.Id === productId);
+      let current_storage = cartItems.filter((item) => item.Id != productId);
+      const product = cartItems.find((item) => item.Id === productId);
       if (product && product.quantity > 1) {
         product.quantity -= 1; // Decrement quantity if more than 1
         current_storage.push(product);
@@ -85,7 +83,7 @@ function addCartButtonListener() {
       localStorage.setItem("so-cart", JSON.stringify(cartItems));
       renderCartContents(); // Re-render the cart contents
     });
-  }); 
+  });
 }
 async function addToCartHandler(e) {
   const productId = e.target?.dataset?.id;

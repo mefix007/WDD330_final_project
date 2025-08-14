@@ -1,7 +1,5 @@
 // import { setLocalStorage }  from "./utils.mjs";
 
-
-
 // document.getElementById("loginForm").addEventListener("submit", (e) => {
 //   e.preventDefault();
 
@@ -10,10 +8,8 @@
 //   const errorMessage = document.getElementById("errorMessage");
 //   const successMessage = document.getElementById("successMessage");
 
-
 //   errorMessage.textContent = "";
 //   successMessage.textContent = "";
-
 
 //   const emailRequirements = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 //   if (!emailRequirements.test(email)) {

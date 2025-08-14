@@ -1,7 +1,7 @@
 import { getParam } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
 import Product from "./ProductDetails.mjs";
-import { loadHeaderFooter }  from "./utils.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
 
 loadHeaderFooter();
 
