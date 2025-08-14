@@ -7,7 +7,7 @@ loadHeaderFooter();
 
 const dataSource = new ExternalServices("tents");
 const productID = getParam("product");
-console.log("Product ID from URL:", productID);
+// console.log("Product ID from URL:", productID);
 const product = new Product(productID, dataSource);
 product.init();
-console.log(product);
+// console.log(product);

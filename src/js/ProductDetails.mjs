@@ -13,11 +13,11 @@ export default class ProductDetails {
     if (this.product) {
       this.renderProductDetails();
     } else {
-      console.error(`Product with ID ${this.productId} not found.`);
+      // console.error(`Product with ID ${this.productId} not found.`);
     }
   }
   addProductToCart() {
-    console.log("Adding product to cart:", this.product);
+    // console.log("Adding product to cart:", this.product);
     let cartItems = JSON.parse(localStorage.getItem("so-cart")) || [];
     if (!Array.isArray(cartItems) && cartItems !== null) {
       cartItems = [cartItems];
@@ -33,11 +33,11 @@ export default class ProductDetails {
   }
 
   renderProductDetails() {
-    console.log(this.product.Image);
-    console.log(this.product);
+    // console.log(this.product.Image);
+    // console.log(this.product);
     const productDetails = document.querySelector(".product-detail");
     if (!productDetails) {
-      console.log("Product details container not found in DOM.");
+      // console.log("Product details container not found in DOM.");
       return;
     }
 

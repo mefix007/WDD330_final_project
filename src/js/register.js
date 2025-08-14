@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      console.log("Sending payload:", payload);
+      // console.log("Sending payload:", payload);
       // Send POST request
       const response = await fetch(
         "https://wdd330-backend.onrender.com/users",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const errorData = await response.json();
         throw new Error(errorData.message || "Sign up failed");
       }
-      console.log("User created successfully:", await response.json());
+      // console.log("User created successfully:", await response.json());
       message.textContent = "Account created successfully!";
       message.classList.add("success");
       signupForm.reset();
