@@ -1,7 +1,7 @@
 {
-  "name": "outside",
+  "name": "japheth_mobile",
   "version": "2.0.0",
-  "description": "Boilerplate for WDD 330 SleepOutside project",
+  "description": "An Ecommerce site for Mobile Phones",
   "main": "main.js",
   "scripts": {
     "start": "vite",
@@ -10,15 +10,15 @@
     "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
     "test": "jest"
   },
-  "author": "Shane Thompson",
+  "author": "Odusile Olufemi",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^8.10.0",
-    "eslint-plugin-import": "^2.29.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^8.10.2",
+    "eslint-plugin-import": "^2.32.0",
     "jest": "^29.7.0",
-    "prettier": "^3.2.5",
-    "vite": "^5.4.7"
+    "prettier": "^3.6.2",
+    "vite": "^7.1.2"
   },
   "babel": {
     "presets": [
